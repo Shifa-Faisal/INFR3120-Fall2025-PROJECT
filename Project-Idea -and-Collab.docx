@@ -1,0 +1,24 @@
+Project idea: Media Review Website
+
+Description/Explanation: Our project idea is creating a media review website. It is to be used when one watches a show/movie or reads a book and wants to write a review about it. The user would have the freedom to add a review on any media, whether it be book, movie, show, music or play. 
+
+The structure of the website would have 4 pages, a home page(in other words the landing page) where all the reviews are displayed to see, an “add a review” page where the user can fill out a review form for a media they’ve consumed, an “edit review” page where the user would select a past form to edit, and then an about page that has instructions about how to use the website and some information about the team behind it. 
+
+We would use bootstrap for both the header and the footer, and the displayed logo would automatically take the user to the about page. All of the pages would be EJS and we’d use JSON to manage the website. 
+
+Team member                                                            Project participation
+----------------------------------------------------------------------------------------------------------------------------
+Shifa Faisal - 100973709                                               - Created github repo and added collaborators 
+                                                                       - Pushed initial documents 
+                                                                       - Made collabroation file
+------------------------------------------------------------------------------------------------------------------------------
+Imama Meraj - 100971234                                                - Came up with the idea
+                                                                       - Wrote the description/explanation
+                                                                       - Planned out the pages
+---------------------------------------------------------------------------------------------------------------------------------
+Mario 
+
+
+
+
+
