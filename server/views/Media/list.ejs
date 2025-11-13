@@ -1,0 +1,33 @@
+<%-include ../partials/header.ejs %>
+<%-include ../partials/main_nav.ejs %>
+<!--Main content for displaying my database-->
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><%= title %></h1>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!--Header Row-->
+                <tr class="d-flex">
+                    <th class="text-center col-2">Media Type</th>
+                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-4">Description</th>
+                    <th class="text-center col-1">Rating</th>
+                    <th class="text-center col-1">Review</th>
+                </tr>
+                <!--for/while loop-->
+                <% for(let count=0; count<mediaList.length;count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= mediaList[count]["Media Type"] %></td>
+                        <td class="text-center col-2"><%= mediaList[count]["Name"] %></td>
+                        <td class="text-center col-4"><%= mediaList[count]["Description"] %></td>
+                        <td class="text-center col-1"><%= mediaList[count]["Rating (out of 5 stars)"] %></td>
+                        <td class="text-center col-1"><%= mediaList[count]["Review"] %></td>
+                    </tr>
+                <% } %>
+            </table>
+
+        </div>
+    </div>
+</main>
+<%-include ../partials/footer.ejs %>

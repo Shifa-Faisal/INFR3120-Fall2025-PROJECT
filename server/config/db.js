@@ -1,0 +1,3 @@
+module.exports = {
+    URI: "mongodb+srv://ShifaFaisal:Project1@cluster0.yvxeiap.mongodb.net/Mediastore"
+};
