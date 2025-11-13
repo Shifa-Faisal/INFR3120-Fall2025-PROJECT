@@ -7,7 +7,11 @@ let mongoose = require('mongoose');
 let DB = require('./db');
 var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
+<<<<<<< HEAD
 let mediaRouter = require('../routes/media')
+=======
+let booksRouter = require('../routes/book')
+>>>>>>> dd7cff3f168346f8985041d711e31cba467dd27f
 var app = express();
 
 // Test DB Connection
@@ -31,7 +35,11 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+<<<<<<< HEAD
 app.use('/media',mediaRouter);
+=======
+app.use('/books',booksRouter);
+>>>>>>> dd7cff3f168346f8985041d711e31cba467dd27f
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

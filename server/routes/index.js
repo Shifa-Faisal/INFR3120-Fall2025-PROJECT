@@ -12,7 +12,10 @@ router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dd7cff3f168346f8985041d711e31cba467dd27f
 /* GET About page. */
 router.get('/about', function(req, res, next) {
   res.render('index', { title: 'About' });
