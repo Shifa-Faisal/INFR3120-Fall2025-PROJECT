@@ -7,7 +7,7 @@ let mediaModel = mongoose.Schema(
     "Media Type": String,
     "Name": String,
     "Description": String,
-    "Rating (out of 5 stars)": String,
+    "Rating (out of 5 stars)": Number, 
     "Review": String
     },
     {

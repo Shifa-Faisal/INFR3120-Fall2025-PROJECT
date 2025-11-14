@@ -3,30 +3,25 @@ var router = express.Router();
 
 /* GET home page. */
 // 127.0.0.1 (/)
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home Page' });
-});
 
 /* GET home page. */
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+router.get('/', function(req, res, next) {
+  res.render('Media/list', {title: 'Media'});
+});
+
+/* GET Add page. */
+router.get('/media/add',function(req, res, next) {
+  res.render('Media/add', { title: 'Add Review' });
 });
 
 /* GET About page. */
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About' });
+  res.render('about', { title: 'About' });
 });
-/* GET products page. */
-router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products' });
-});
-/* GET services page. */
-router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services' });
-});
+
 /* GET contact us page. */
-router.get('/contactus', function(req, res, next) {
-  res.render('index', { title: 'Contact us' });
+router.get('/contactus', function(req, res, next)  {
+  res.render('contactus', { title: 'Contact us' });
 });
 
 module.exports = router;
