@@ -5,7 +5,7 @@
   <h1><%= title %></h1>
   <p class="lead">Use this form to add a new media review to the database.</p>
 
-  <form action="/media/add" method="POST" class="mt-3">
+  <form action="/media/edit/<%= media._id %>" method="POST" class="mt-3">
 
     <!-- Media Type -->
     <div class="mb-3">
