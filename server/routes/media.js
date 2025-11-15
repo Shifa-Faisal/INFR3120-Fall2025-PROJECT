@@ -71,14 +71,59 @@ router.post('/add',async(req,res,next)=>{
 })
 // Get route for displaying the Edit Page - Update Operation
 router.get('/edit/:id',async(req,res,next)=>{
+    try
+    { 
+        const id = req.params.id;
+        const mediatoEdit = await Media.findById(id);
+        res.render('Media/edit', 
+            { 
+                title: 'Edit Media Review',
+                media: mediatoEdit
+            }
+);
+
+    }
+
+    catch(err)
+    {
+        console.log(err);
+        next(err);
+    }
 
 })
+
 // Post route for processing the Edit Page - Update Operation
-router.post('/edit/:id',async(req,res,next)=>{
+router.post('/edit/:id', async(req, res, next) => {
+    try {
+        const id = req.params.id;
+        let updateMedia = {
+            "_id": id,
+            "Media Type": req.body.type,      
+            "Name": req.body.name,
+            "Description": req.body.description,
+            "Rating (out of 5 stars) ": req.body.rating,
+            "Review": req.body.review
+        };
+        Media.findByIdAndUpdate(id, updateMedia); 
+        res.redirect('/media');
+    } 
+    catch(err) {
+        console.log(err);
+        next(err);
+    }
+});
 
-})
+
+
 // Get route for performing delete operation - Delete Operation
 router.get('/delete/:id',async(req,res,next)=>{
+    try
+    {
+        const id = req.params.id;
+        Media.deleteOne({_id:id}).then(()=>{
+            res.redirect('/media')
+        })  
+    }
 
 })
 module.exports = router;
