@@ -4,7 +4,8 @@ Media Review Website - Javascript, HTML, CSS
 Course: INFR 3120 - Web and Scripting Programming at Ontario Tech University
 Students: Shifa Faisal, Imama Meraj, Mario Solundu
 
-Link to website: 
+Link to website: https://infr3120-fall2025-project.onrender.com
+Link to github repo: https://github.com/Shifa-Faisal/INFR3120-Fall2025-PROJECT.git
 
 Project Overview -
 Media review website where users can write and browse reviews for multiple types of media such as books, movies, tv shows and more, After consuming a piece of media users can submit their own reviews, edit previous or others reviews, or explore reviews left by others. 
