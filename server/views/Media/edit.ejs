@@ -53,18 +53,14 @@
     <!-- Rating -->
     <div class="mb-3">
       <label class="form-label">Rating (out of 5 stars)</label>
-      <input
-        type="number"
-        id="rating"
-        name="rating"
-        value="<%= media['Rating (out of 5 stars)'] %>"
-        class="form-control"
-        step="0.1"
-        min="0"
-        max="5"
-        placeholder="e.g. 4.6"
-        required
-      >
+        <select id="rating" name="rating" class="form-select" required>
+        <option value="">-- Select Rating --</option>
+        <option value="1">1 - ⭐</option>
+        <option value="2">2 - ⭐⭐</option>
+        <option value="3">3 - ⭐⭐⭐</option>
+        <option value="4">4 - ⭐⭐⭐⭐</option>
+        <option value="5">5 - ⭐⭐⭐⭐⭐</option>
+      </select>
     </div>
 
     <!-- Review -->
