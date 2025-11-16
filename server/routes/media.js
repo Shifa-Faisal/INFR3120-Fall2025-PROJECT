@@ -14,7 +14,7 @@ router.post('/add', async (req, res) => {
             "Media Type": req.body.type,
             "Name": req.body.name,
             "Description": req.body.description,
-            "Rating (out of 5 stars) ": req.body.rating,
+            "Rating (out of 5 stars)": req.body.rating,
             "Review": req.body.review
         };
 
@@ -45,7 +45,7 @@ router.post('/edit/:id', async (req, res) => {
             "Media Type": req.body.type,
             "Name": req.body.name,
             "Description": req.body.description,
-            "Rating (out of 5 stars) ": req.body.rating,
+            "Rating (out of 5 stars)": req.body.rating,
             "Review": req.body.review
         });
 
