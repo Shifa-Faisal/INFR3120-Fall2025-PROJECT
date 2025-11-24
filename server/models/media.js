@@ -14,4 +14,5 @@ let mediaModel = mongoose.Schema(
         collection:"Media"
     }
 );
+
 module.exports=mongoose.model('Media',mediaModel);
