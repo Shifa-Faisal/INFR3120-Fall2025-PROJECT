@@ -10,16 +10,15 @@ var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
 let mediaRouter = require('../routes/media');
 
-var app = express();
-
 let session = require('express-session');
 let passport = require('passport');
 let passportLocal = require('passport-local');
 let localStrategy = passportLocal.Strategy;
 let flash = require('connect-flash');
 let cors = require('cors');
+var app = express();
 
-let userModel = require('../model/user');
+let userModel = require('../models/user');
 let User = userModel.User;
 
 // Test DB Connection
@@ -47,6 +46,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 
 // session and passport config
+// SET UP EXPRESS SESSION whys it all the way down here will that be a problem?
 app.use(session({
   secret: "Somesecret",
   saveUninitialized: false,

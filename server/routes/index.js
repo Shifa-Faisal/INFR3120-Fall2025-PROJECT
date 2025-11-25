@@ -4,8 +4,8 @@ var router = express.Router();
 let Media = require('../models/media');
 
 const passport = require('passport');
-
-let userModel = require('../model/user');
+let DB = require('../config/db');
+let userModel = require('../models/user');
 let User = userModel.User;
 
 
@@ -37,8 +37,6 @@ router.get('/login', function(req,res,next){
       title:'Login',
       message: req.flash('loginMessage')
       }
-
-
     )
   }
   else

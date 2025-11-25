@@ -1,6 +1,7 @@
 const { trim, type } = require('jquery');
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
+/* THIS MIGHT NOT BE ROUTED PROPERLY COME BACK AND SEE IF THERES AN ISSUE*/
 const { collection } = require('./media');
 
 
