@@ -63,7 +63,7 @@ router.post('/login', function(req,res,next){
     {
       return next(err);
     }
-    return res.redirect("/media")
+    return res.redirect("/")
     })
   })(req,res,next)
 });
@@ -114,7 +114,7 @@ router.post('/register', function(req,res,next){
     }
     else{
       return passport.authenticate('local')(req,res,()=>{
-        res.redirect("/media");
+        res.redirect("/");
       })
     }
   })
