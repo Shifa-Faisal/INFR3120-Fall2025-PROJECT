@@ -1,79 +1,81 @@
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
+
     <a class="navbar-brand" href="/">SIMs Media Reviews</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        
-        
-        <!-- to have the welcome in thr navbar and the logout button on two different sides we gonna divide the code into 
-         2 parts and put the welcome half on the left side and the logout on the rightside-->
-        
-         <!--LEFT SIDE FOR THE WELCOME-->
-          <% if(typeof displayName=='string' && displayName) { %>
-            <li class="navbar-text">
-              <i class="fas fa-lg fa-user"></i>
-              Welcome, <%= displayName %>
-            </li>
-        <% } else { %>
-            <li class="nav-item">
-              <a href="/login" class="nav-link">
-                <i class="fas fa-lg fa-sign-in-alt"></i> Login
-              </a>
-            </li>
-        <% } %>
 
+        <% if (typeof displayName === 'string' && displayName) { %>
 
-        <li class="nav-item">
-        <!-- this is to link the landing page/home page-->
-        <% if (title == "Media") { %>
-          <a class="nav-link active" aria-current="page" href="/">
-            <i class="fa fa-star fa-lg"></i> Media</a>
-        <% } else { %>
-            <a class="nav-link" aria-current="page" href="/">
-              <i class="fa fa-star fa-lg"></i> Media</a>
-        <% } %>
-        </li>
-        <!-- this is to link the add a review page thats commented out for now cuz its messing up the login stuff
-        <li class="nav-item">
-        <% if (title == "Add Review") { %>
-          <a class="nav-link active" aria-current="page" href="/media/add"><i class="fa-solid fa-plus"></i> Add Review</a>
-        <% } else { %>
-          <a class="nav-link" aria-current="page" href="/media/add"><i class="fa-solid fa-plus"></i> Add Review</a>
-          <% } %>
-        </li>-->
-        <!-- this is to link the about page-->
-        <li class="nav-item">
-        <% if (title == "About") { %>
-          <a class="nav-link active" aria-current="page" href="/about"><i class="fa-solid fa-lg fa-circle-info"></i> About</a>
-        <% } else { %>
-          <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-lg fa-circle-info"></i> About</a>
-        <% } %>
-        </li>
-        <!-- this is to link the contact page-->
-        <li class="nav-item">
-          <% if (title == "Contact Us") { %>
-          <a class="nav-link active" aria-current="page" href="/contactus"><i class="fa-solid fa-lg fa-phone"></i> Contact Us</a>
-        <% } else { %>
-          <a class="nav-link" aria-current="page" href="/contactus"><i class="fa-solid fa-lg fa-phone"></i> Contact Us</a>
-          <% } %>
-        </li>
+          <!-- 
+            to have the welcome in thr navbar and the logout button on two different sides 
+            we divide the code into 2 parts 
+          -->
+          
+          <!-- WELCOME -->
+          <li class="navbar-text me-3">
+            <i class="fas fa-lg fa-user"></i>
+            Welcome, <%= displayName %>
+          </li>
 
-        <!-- LOG OUT ON THE RIGHT SIDE-->
-
-        <% if(typeof displayName=='string' && displayName) { %>
-        <ul class="navbar-nav ms-auto">
+          <!-- MEDIA -->
           <li class="nav-item">
+            <a class="nav-link <%= title === 'Media' ? 'active' : '' %>" href="/">
+              <i class="fa fa-star fa-lg"></i> Media
+            </a>
+          </li>
+
+          <!-- this is to link the add a review page thats commented out for now cuz its messing up the login stuff
+          <li class="nav-item">
+            <% if (title == "Add Review") { %>
+              <a class="nav-link active" aria-current="page" href="/media/add"><i class="fa-solid fa-plus"></i> Add Review</a>
+            <% } else { %>
+              <a class="nav-link" aria-current="page" href="/media/add"><i class="fa-solid fa-plus"></i> Add Review</a>
+            <% } %>
+          </li>
+          -->
+
+          <!-- ABOUT -->
+          <li class="nav-item">
+            <a class="nav-link <%= title === 'About' ? 'active' : '' %>" href="/about">
+              <i class="fa-solid fa-lg fa-circle-info"></i> About
+            </a>
+          </li>
+
+          <!-- CONTACT -->
+          <li class="nav-item">
+            <a class="nav-link <%= title === 'Contact Us' ? 'active' : '' %>" href="/contactus">
+              <i class="fa-solid fa-lg fa-phone"></i> Contact Us
+            </a>
+          </li>
+
+          <!-- LOGOUT (right side) -->
+          <li class="nav-item ms-lg-3">
             <a href="/logout" class="nav-link">
               <i class="fas fa-lg fa-sign-out-alt"></i> Logout
             </a>
           </li>
-        </ul>
-      <% } %>
+
+        <% } else { %>
+
+          <!-- USER LOGGED OUT: ONLY LOGIN -->
+          <li class="nav-item">
+            <a href="/login" class="nav-link">
+              <i class="fas fa-lg fa-sign-in-alt"></i> Login
+            </a>
+          </li>
+
+        <% } %>
 
       </ul>
     </div>
+
   </div>
 </nav>
