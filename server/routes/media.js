@@ -2,9 +2,21 @@ let express = require('express');
 let router = express.Router();
 let Media = require('../models/media');
 
+function requireAuth(req,res,next)
+{
+    if(!req.isAuthenticated())
+    {
+        return res.redirect('/login')
+    }
+    next();
+}
+
+
 // displays the add page
 router.get('/add', (req, res) => {
-    res.render('Media/add', { title: 'Add Review' });
+    res.render('Media/add', { title: 'Add Review' ,
+        displayName: req.user?req.user.displayName:""
+    });
 });
 
 // processing the actual form and data
@@ -31,7 +43,9 @@ router.get('/edit/:id', async (req, res) => {
     try {
         //find the id for the item and pulls it up to edit then after editing sens user back home
         const media = await Media.findById(req.params.id);
-        res.render('Media/edit', { title: 'Edit Media Review', media });
+        res.render('Media/edit', { title: 'Edit Media Review', media, 
+            displayName: req.user?req.user.displayName:""
+        });
     } catch (err) {
         console.error(err);
         res.redirect('/');

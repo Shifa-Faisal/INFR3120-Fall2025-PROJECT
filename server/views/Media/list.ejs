@@ -1,57 +1,98 @@
-<%- include('../partials/header') %>
-<%- include('../partials/main_nav') %>
-<!--Main content for displaying my database-->
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
 <main class="container">
     <div class="row">
-        <div class="offset-md-1 col-md-10">
+        <div class="offset-md-1 col-md-11">
             <h1><%= title %></h1>
-            <p class="lead">Browse all reviews in the media store.</p>
-            <a href="/media/add" class="btn btn-primary" role="button">
-            <i class="fas fa-plus-circle"></i> Add a Review
-            </a>
-            <br> 
 
-            <table class="table table-bordered table-striped table-hover">
-                <!--Header Row-->
-                <tr class="d-flex">
-                    <th class="text-center col-1">Media Type</th>
-                    <th class="text-center col-1">Name</th>
-                    <th class="text-center col-4">Description</th>
-                    <th class="text-center col-1">Rating</th>
-                    <th class="text-center col-3">Review</th>
-                </tr>
+            <% if (typeof displayName === 'string' && displayName) { %>
+                <a href="/mediay/add" class="btn btn-primary" role="button">
+                    <i class="fas fa-plus-circle"></i> Add a Media
+                </a>
+            <% } %>
 
-                <% 
-                  // Safe fallback: if mediaList is undefined, use an empty array
-                  const items = mediaList || [];
-                %>
+            <% if (typeof displayName === 'string' && displayName) { %>
 
-                <!--for/while loop-->
-                <% for(let count=0; count<mediaList.length;count++) { %>
+                <table class="table table-bordered table-striped table-hover">
+                    <tr class="d-flex">
+                        <th class="text-center col-1">Media Type</th>
+                        <th class="text-center col-1">Name</th>
+                        <th class="text-center col-4">Description</th>
+                        <th class="text-center col-1">Rating</th>
+                        <th class="text-center col-3">Review</th>
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
+                    </tr>
+
+                    <% for (let count = 0; count < mediaList.length; count++) { %>
                     <tr class="d-flex">
                         <td class="text-center col-1"><%= mediaList[count]["Media Type"] %></td>
                         <td class="text-center col-1"><%= mediaList[count]["Name"] %></td>
                         <td class="text-center col-4"><%= mediaList[count]["Description"] %></td>
                         <td class="text-center col-1"><%= mediaList[count]["Rating (out of 5 stars)"] %></td>
                         <td class="text-center col-3"><%= mediaList[count]["Review"] %></td>
-                       
+
                         <td class="text-center col-1">
-                        <a href="/media/edit/<%= mediaList[count]._id%>" 
-                        class="btn btn-primary btn-sm">
-                        <i class="fas fa-pencil-alt"></i> Edit </a>
+                            <a href="/media/edit/<%= mediaList[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit
+                            </a>
                         </td>
 
                         <td class="text-center col-1">
-                        <a href="/media/delete/<%= mediaList[count]._id%>" 
-                        class="btn btn-danger btn-sm"> 
-                        <i class="fas fa-trash-alt"></i> Delete</a>
+                            <a href="/media/delete/<%= mediaList[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </a>
                         </td>
-
                     </tr>
-                <% } %>
-            </table>
+                    <% } %>
+
+                </table>
+
+            <% } else { %>
+
+                <!--Defing the items on the actual database entries list-->
+                <% const items = mediaList || []; %>
+
+                <table class="table table-bordered table-striped table-hover">
+                    <tr class="d-flex">
+                        <th class="text-center col-1">Media Type</th>
+                        <th class="text-center col-1">Name</th>
+                        <th class="text-center col-4">Description</th>
+                        <th class="text-center col-1">Rating</th>
+                        <th class="text-center col-3">Review</th>
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
+                    </tr>
+
+                    <% for (let count = 0; count < items.length; count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-1"><%= items[count]["Media Type"] %></td>
+                        <td class="text-center col-1"><%= items[count]["Name"] %></td>
+                        <td class="text-center col-4"><%= items[count]["Description"] %></td>
+                        <td class="text-center col-1"><%= items[count]["Rating (out of 5 stars)"] %></td>
+                        <td class="text-center col-3"><%= items[count]["Review"] %></td>
+
+                        <td class="text-center col-1">
+                            <a href="/media/edit/<%= items[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit
+                            </a>
+                        </td>
+
+                        <td class="text-center col-1">
+                            <a href="/media/delete/<%= items[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <% } %>
+
+                </table>
+
+            <% } %>
 
         </div>
     </div>
 </main>
+
 <%- include('../partials/footer') %>
