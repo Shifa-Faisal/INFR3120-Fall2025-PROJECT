@@ -1,5 +1,5 @@
-<%- include ../partials/header.ejs %>
-<%- include ../partials/main_nav.ejs %>
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/main_nav.ejs') %>
 
 <main class="container">
     <div class="row">
@@ -7,7 +7,7 @@
             <h1><%= title %></h1>
 
             <% if (typeof displayName === 'string' && displayName) { %>
-                <a href="/mediay/add" class="btn btn-primary" role="button">
+                <a href="/media/add" class="btn btn-primary" role="button">
                     <i class="fas fa-plus-circle"></i> Add a Media
                 </a>
             <% } %>
@@ -81,4 +81,4 @@
     </div>
 </main>
 
-<%- include ../partials/footer.ejs %>
+<%- include ('../partials/footer.ejs') %>
