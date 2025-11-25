@@ -61,8 +61,6 @@
                         <th class="text-center col-4">Description</th>
                         <th class="text-center col-1">Rating</th>
                         <th class="text-center col-3">Review</th>
-                        <th class="text-center col-1"></th>
-                        <th class="text-center col-1"></th>
                     </tr>
 
                     <% for (let count = 0; count < items.length; count++) { %>
@@ -72,18 +70,6 @@
                         <td class="text-center col-4"><%= items[count]["Description"] %></td>
                         <td class="text-center col-1"><%= items[count]["Rating (out of 5 stars)"] %></td>
                         <td class="text-center col-3"><%= items[count]["Review"] %></td>
-
-                        <td class="text-center col-1">
-                            <a href="/media/edit/<%= items[count]._id %>" class="btn btn-primary btn-sm">
-                                <i class="fas fa-pencil-alt"></i> Edit
-                            </a>
-                        </td>
-
-                        <td class="text-center col-1">
-                            <a href="/media/delete/<%= items[count]._id %>" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i> Delete
-                            </a>
-                        </td>
                     </tr>
                     <% } %>
 
@@ -95,4 +81,4 @@
     </div>
 </main>
 
-<%- include('../partials/footer') %>
+<%- include ../partials/footer.ejs %>
