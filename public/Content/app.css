@@ -1,0 +1,67 @@
+/* this is the global css file that will have most of the aesthetic elements
+if some pages need the elements in other css files itll be specified
+ the color scheme is as follows:
+ #401014
+ #591D28
+ #8C3E4C
+ #BF6071
+ #BFAAAA
+ white (if none of the other ones feel right)
+ */
+
+
+/* table header*/
+    .table thead th,
+    .table tr:first-child th {
+        background-color: #BFAAAA;
+        color: white;
+    }
+
+/* table border*/
+    .table-bordered{
+        border-color: white !important;
+    }
+
+/*regular row color*/
+    .table-striped > tbody > tr:nth-last-of-type(odd){
+        background-color: #BF6071 !important;
+    }
+
+/* hover row color*/
+    .table-hover tbody tr:hover {
+        background-color: #8C3E4C !important;
+    }
+
+/* background of page (change this based on page) */
+    body{
+        background-color: #401014;
+    }
+
+/* the h1 title color */
+    h1 {
+        color: white;
+        font-weight: 800;
+        margin-top: 20px;
+    }
+
+/* the button colors*/
+/* the edit button (primary)  */
+    .btn-primary {
+        background-color: #401014;
+        border-color: #BFAAAA;
+    }
+    .btn-primary:hover {
+        background-color: #8C3E4C;
+        border-color: #BFAAAA;
+    }
+
+
+/* the delete button (danger)*/
+    .btn-danger {
+        background-color: #401014;
+        border-color: #BFAAAA;
+    }
+    .btn-danger:hover {
+        background-color: #8C3E4C;
+        border-color: #BFAAAA;
+    }
