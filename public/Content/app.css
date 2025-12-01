@@ -9,36 +9,45 @@ if some pages need the elements in other css files itll be specified
  white (if none of the other ones feel right)
  */
 
+/* background of page */
+body {
+    background-color: #401014 !important;
+}
+
+/* ----------------------- TABLE FROM LIST.EJS ------------------*/
+
 .table{
     width: 100% !important;
     
 }
 
 /* table header */
-.table thead th,
+.table > thead > tr > th,
 .table tr:first-child th {
-    background-color: #BFAAAA !important;
+    background-color:#591D28 !important;
     color: white;
 }
 
 /* table border */
 .table-bordered {
-    border-color: white !important;
+    border-color: #591D28 !important;
+    border-width: 80px;
 }
 
 /* regular row color */
-.table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: #BF6071 !important;
+.table-striped > tbody > tr > td {
+    background-color: #BFAAAA !important;
 }
 
 /* hover row color */
-.table-hover tbody tr:hover {
+.table-hover > tbody > tr:hover > td {
     background-color: #8C3E4C !important;
+    color: white;
 }
 
-/* background of page */
-body {
-    background-color: #401014 !important;
+.table > thead > tr > th{
+    background-color: #591D28;
+    color: white;
 }
 
 /* the h1 title color */
@@ -50,7 +59,7 @@ h1 {
 
 /* the edit button (primary) */
 .btn-primary {
-    background-color: #401014 !important;
+    background-color: #591D28  !important;
     border-color: #BFAAAA;
 }
 .btn-primary:hover {
@@ -60,9 +69,25 @@ h1 {
 
 /* the delete button (danger) */
 .btn-danger {
-    background-color: #401014 !important;
+    background-color: #591D28  !important;
     border-color: #BFAAAA !important;
 }
 .btn-danger:hover {
     background-color: #8C3E4C !important;
 }
+
+
+/* --------------------- ADD/EDIT FORMS PAGES ------------------------ */
+
+
+
+
+
+
+/* ---------------------- ABOUT page -----------------------------------*/
+
+
+
+
+
+/* ---------------------- CONTACT page -----------------------------------*/
