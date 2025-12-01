@@ -9,59 +9,60 @@ if some pages need the elements in other css files itll be specified
  white (if none of the other ones feel right)
  */
 
+.table{
+    width: 100% !important;
+    
+}
 
-/* table header*/
-    .table thead th,
-    .table tr:first-child th {
-        background-color: #BFAAAA;
-        color: white;
-    }
+/* table header */
+.table thead th,
+.table tr:first-child th {
+    background-color: #BFAAAA !important;
+    color: white;
+}
 
-/* table border*/
-    .table-bordered{
-        border-color: white !important;
-    }
+/* table border */
+.table-bordered {
+    border-color: white !important;
+}
 
-/*regular row color*/
-    .table-striped > tbody > tr:nth-last-of-type(odd){
-        background-color: #BF6071 !important;
-    }
+/* regular row color */
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #BF6071 !important;
+}
 
-/* hover row color*/
-    .table-hover tbody tr:hover {
-        background-color: #8C3E4C !important;
-    }
+/* hover row color */
+.table-hover tbody tr:hover {
+    background-color: #8C3E4C !important;
+}
 
-/* background of page (change this based on page) */
-    body{
-        background-color: #401014;
-    }
+/* background of page */
+body {
+    background-color: #401014 !important;
+}
 
 /* the h1 title color */
-    h1 {
-        color: white;
-        font-weight: 800;
-        margin-top: 20px;
-    }
+h1 {
+    color: white !important;
+    font-weight: 800 !important;
+    margin-top: 20px !important;
+}
 
-/* the button colors*/
-/* the edit button (primary)  */
-    .btn-primary {
-        background-color: #401014;
-        border-color: #BFAAAA;
-    }
-    .btn-primary:hover {
-        background-color: #8C3E4C;
-        border-color: #BFAAAA;
-    }
+/* the edit button (primary) */
+.btn-primary {
+    background-color: #401014 !important;
+    border-color: #BFAAAA;
+}
+.btn-primary:hover {
+    background-color: #8C3E4C !important;
+    border-color: #BFAAAA !important;
+} 
 
-
-/* the delete button (danger)*/
-    .btn-danger {
-        background-color: #401014;
-        border-color: #BFAAAA;
-    }
-    .btn-danger:hover {
-        background-color: #8C3E4C;
-        border-color: #BFAAAA;
-    }
+/* the delete button (danger) */
+.btn-danger {
+    background-color: #401014 !important;
+    border-color: #BFAAAA !important;
+}
+.btn-danger:hover {
+    background-color: #8C3E4C !important;
+}

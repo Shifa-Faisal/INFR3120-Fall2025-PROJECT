@@ -15,64 +15,69 @@
             <% if (typeof displayName === 'string' && displayName) { %>
 
                 <table class="table table-bordered table-striped table-hover">
-                    <tr class="d-flex">
-                        <th class="text-center col-1">Media Type</th>
-                        <th class="text-center col-1">Name</th>
-                        <th class="text-center col-4">Description</th>
-                        <th class="text-center col-1">Rating</th>
-                        <th class="text-center col-3">Review</th>
-                        <th class="text-center col-1"></th>
-                        <th class="text-center col-1"></th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th class="text-center col-1">Media Type</th>
+                            <th class="text-center col-1">Name</th>
+                            <th class="text-center col-4">Description</th>
+                            <th class="text-center col-1">Rating</th>
+                            <th class="text-center col-3">Review</th>
+                            <th class="text-center col-1"></th>
+                            <th class="text-center col-1"></th>
+                        </tr>
+                    </thead>
 
-                    <% for (let count = 0; count < mediaList.length; count++) { %>
-                    <tr class="d-flex">
-                        <td class="text-center col-1"><%= mediaList[count]["Media Type"] %></td>
-                        <td class="text-center col-1"><%= mediaList[count]["Name"] %></td>
-                        <td class="text-center col-4"><%= mediaList[count]["Description"] %></td>
-                        <td class="text-center col-1"><%= mediaList[count]["Rating (out of 5 stars)"] %></td>
-                        <td class="text-center col-3"><%= mediaList[count]["Review"] %></td>
+                    <tbody>
+                        <% for (let count = 0; count < mediaList.length; count++) { %>
+                        <tr>
+                            <td class="text-center col-1"><%= mediaList[count]["Media Type"] %></td>
+                            <td class="text-center col-1"><%= mediaList[count]["Name"] %></td>
+                            <td class="text-center col-4"><%= mediaList[count]["Description"] %></td>
+                            <td class="text-center col-1"><%= mediaList[count]["Rating (out of 5 stars)"] %></td>
+                            <td class="text-center col-3"><%= mediaList[count]["Review"] %></td>
 
-                        <td class="text-center col-1">
-                            <a href="/media/edit/<%= mediaList[count]._id %>" class="btn btn-primary btn-sm">
-                                <i class="fas fa-pencil-alt"></i> Edit
-                            </a>
-                        </td>
+                            <td class="text-center col-1">
+                                <a href="/media/edit/<%= mediaList[count]._id %>" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-pencil-alt"></i> Edit
+                                </a>
+                            </td>
 
-                        <td class="text-center col-1">
-                            <a href="/media/delete/<%= mediaList[count]._id %>" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i> Delete
-                            </a>
-                        </td>
-                    </tr>
-                    <% } %>
-
+                            <td class="text-center col-1">
+                                <a href="/media/delete/<%= mediaList[count]._id %>" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
                 </table>
 
             <% } else { %>
 
-                <!--Defing the items on the actual database entries list-->
                 <% const items = mediaList || []; %>
 
                 <table class="table table-bordered table-striped table-hover">
-                    <tr class="d-flex">
-                        <th class="text-center col-1">Media Type</th>
-                        <th class="text-center col-1">Name</th>
-                        <th class="text-center col-4">Description</th>
-                        <th class="text-center col-1">Rating</th>
-                        <th class="text-center col-3">Review</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th class="text-center col-1">Media Type</th>
+                            <th class="text-center col-1">Name</th>
+                            <th class="text-center col-4">Description</th>
+                            <th class="text-center col-1">Rating</th>
+                            <th class="text-center col-3">Review</th>
+                        </tr>
+                    </thead>
 
-                    <% for (let count = 0; count < items.length; count++) { %>
-                    <tr class="d-flex">
-                        <td class="text-center col-1"><%= items[count]["Media Type"] %></td>
-                        <td class="text-center col-1"><%= items[count]["Name"] %></td>
-                        <td class="text-center col-4"><%= items[count]["Description"] %></td>
-                        <td class="text-center col-1"><%= items[count]["Rating (out of 5 stars)"] %></td>
-                        <td class="text-center col-3"><%= items[count]["Review"] %></td>
-                    </tr>
-                    <% } %>
-
+                    <tbody>
+                        <% for (let count = 0; count < items.length; count++) { %>
+                        <tr>
+                            <td class="text-center col-1"><%= items[count]["Media Type"] %></td>
+                            <td class="text-center col-1"><%= items[count]["Name"] %></td>
+                            <td class="text-center col-4"><%= items[count]["Description"] %></td>
+                            <td class="text-center col-1"><%= items[count]["Rating (out of 5 stars)"] %></td>
+                            <td class="text-center col-3"><%= items[count]["Review"] %></td>
+                        </tr>
+                        <% } %>
+                    </tbody>
                 </table>
 
             <% } %>
