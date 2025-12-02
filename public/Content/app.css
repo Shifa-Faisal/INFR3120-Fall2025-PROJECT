@@ -145,8 +145,138 @@ h1 {
 
 /* ---------------------- ABOUT page -----------------------------------*/
 
+/*adjusting the container for the page*/
+.container.py-4 {
+    max-width:900px !important;
+}
 
+/*main title, where it says about*/
+.container.py-4 h1{
+    text-align: center !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    color:white !important;
+}
 
+/*styling the welcome sentence*/
+.container.py-4 p{
+    font-size: 100 rem !important;
+    color: white !important;
+}
+
+/*logo*/
+.text-center img{
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/*little paragraph*/
+.lead.text-center{
+    font-size: 400 rem !important;
+    color:white !important;
+    margin-bottom: 20px !important;
+}
 
 
 /* ---------------------- CONTACT page -----------------------------------*/
+
+
+
+
+/* ---------------------- Navigation bar!! ------------------- */
+
+/*making the bar taller*/
+.navbar{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/*changing the default bootstrap nav bar color to a different color*/
+.custom-navbar{
+    background-color:#BFAAAA !important;
+}
+
+/* making the name of the site bigger*/
+.navbar-brand{
+    font-weight: 800;
+    font-size: 1.5rem;
+    color:#591D28 !important;
+}
+
+/*space between items*/
+.navbar-nav .nav-link{
+    margin-left:0.6 rem;
+    margin-right:0.6 rem;
+    color:#591D28 !important;
+}
+
+
+/*hover but for the item is like lighting up*/
+.navbar-nav .nav-link.active{
+    color:white !important;
+    font-weight: 600;
+}
+
+/*spreading out the icons in the navbar*/
+.navbar-nav i{
+    margin-right:4px;
+    color:#591D28 !important;
+}
+
+/*welcome name styling*/
+.navbar-text{
+    font-size: 1.1rem;
+    color:#591D28;
+    display:flex;
+    align-items: center;
+}
+
+/* -------------------- footer -------------------*/
+
+.custom-footer{
+    background-color:#BFAAAA !important;
+}
+
+
+
+/* the two buttons on the login page*/
+
+/*login button*/
+.btn-success{
+    background-color: #591D28!important;
+    border-color:#BFAAAA !important;
+    font-weight: 700 !important;
+}
+
+.btn-success:hover{
+    background-color: #8C3E4C !important;
+    border-color: #BFAAAA !important;
+}
+
+/*cancel button*/
+.btn-warning{
+    background-color: #591D28 !important;
+    border-color:#BFAAAA !important;
+    font-weight: 700 !important;
+    color: white !important;
+}
+
+.btn-warning:hover{
+    background-color: #8C3E4C !important;
+    border-color: #BFAAAA !important;
+    color: white !important;
+}
+
+/*register button*/
+.btn-register{
+    background-color: #591D28 !important;
+    border-color:#BFAAAA !important;
+    font-weight: 700 !important;
+    color: white !important;
+}
+
+.btn-register:hover{
+    background-color: #8C3E4C !important;
+    border-color: #BFAAAA !important;
+    color: white !important;
+}
