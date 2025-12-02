@@ -18,7 +18,6 @@ body {
 
 .table{
     width: 100% !important;
-    
 }
 
 /* table header */
@@ -53,7 +52,7 @@ body {
 /* the h1 title color */
 h1 {
     color: white !important;
-    font-weight: 800 !important;
+    font-weight: 1000 !important;
     margin-top: 20px !important;
 }
 
@@ -80,8 +79,68 @@ h1 {
 /* --------------------- ADD/EDIT FORMS PAGES ------------------------ */
 
 
+/* form labels*/
+.form-label {
+    color: white !important;
+    font-weight: 700 !important;
+}
 
+/*input fields*/
+.form-control, .form-select{
+    background-color: #BFAAAA !important;
+    color: #401014 !important;
+    border: 2px solid #591D28 !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
 
+/* place holder text*/
+.form-control::placeholder {
+    color:#591D28 !important;
+}
+
+/* focus effects, its like hovering for the buttons*/
+.form-control:focus, .form-select:focus {
+    background-color: #8C3E4C !important;
+    color: white !important;
+    border-color: #401014 !important;
+    box-shadow: none !important;
+}
+
+/*page headings*/
+.container h1 {
+    color: white !important;
+    font-weight: 1000 !important;
+}
+
+.container .lead {
+    color:#401014 !important;
+    font-weight: 600 !important;
+}
+
+/*save button*/
+.btn-primary{
+    background-color: #591D28!important;
+    border-color:#BFAAAA !important;
+    font-weight: 700 !important;
+}
+
+.btn-primary:hover{
+    background-color: #8C3E4C !important;
+    border-color: #BFAAAA !important;
+}
+
+/*back button*/
+.btn-secondary{
+    background-color: #591D28 !important;
+    border-color:#BFAAAA !important;
+    font-weight: 700 !important;
+}
+
+.btn-secondary:hover{
+    background-color: #8C3E4C !important;
+    border-color: #BFAAAA !important;
+}
 
 
 /* ---------------------- ABOUT page -----------------------------------*/
