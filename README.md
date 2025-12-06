@@ -13,10 +13,17 @@ Media review website where users can write and browse reviews for multiple types
 The website is built with Javascript, HTML, CSS, EJS and styled using bootstrap, with data managed with MongoDB. 
 
     Media (Home) page 
-    Add a Book page
     About Us Page
     Contact Us page
+    Login/logout page 
 
+Colour Scheme:
+ #401014
+ #591D28
+ #8C3E4C
+ #BF6071
+ #BFAAAA
+ white
 
 Structure -
     Node_modules - contains all installed dependencies
@@ -43,6 +50,7 @@ Credits -
     Expressjs.com - To create the base of website
     Font Awesome.com - To find mini logos for header and more
     Bootstrap.com - Styling 
+    Angular - client side
     Shifa Faisal - Contact: shifa.faisal@ontariotechu.net
     Imama Meraj - Contact  imama.meraj@ontariotechu.net
     Mario Solundo Onyido - Contact: mariosolundo.onyido@ontariotechu.net 
